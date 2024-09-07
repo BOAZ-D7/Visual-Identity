@@ -1,0 +1,205 @@
+/* Estilos globais */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('NewBack.jpg');
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  /* ... (other header styles) */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Align search bar at the bottom */
+  height: 600px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+main {
+  background-image: url('Scroll.jpg');
+  background-position: -1050px 00px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.search-bar {
+  position: relative;
+  width: 80%;
+  max-width: 400px;
+  padding: 1rem;
+  border: 2px solid #050425;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #fff; /* Use white text for better contrast */
+  margin: 0 auto; /* Center horizontally */
+  transition: background-color 0.3s ease-in-out; /* Add a smooth transition */
+}
+
+.search-bar:hover {
+  background-color: #080728; /* Darker background on hover */
+}
+
+.search-bar input {
+  text-align: center;;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent; /* Transparent background for a cleaner look */
+  color: #dbd0d0; /* White text for input */
+  padding: 0.75rem 1rem; /* Adjust padding as needed */
+}
+
+.search-bar input::placeholder {
+  color: #ccc; /* Placeholder text color */
+}
+
+.search-bar .search-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #fff; /* White icon color */
+  font-size: 1.2rem; /* Adjust icon size if needed */
+}
+
+/* Cabeçalho */
+header {
+  background-image: url('BackOne.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 1200px;
+}
+
+.link-click {
+  text-align: center;
+  margin: 0px auto;
+}
+
+h1 {
+  font-family:Georgia, 'Times New Roman', Times, serif; /* Consistent font family */
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 150px; /* Adjust font size as needed */
+  text-align: center;
+}
+
+h2 {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Consistent font family */
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: 35px;
+  color: #fff;
+  background-image: linear-gradient(to right, rgb(0, 7, 31), black);
+  text-align: center;
+  margin-top: 750px;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif; /* Consistent font family */
+  font-size: 70px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+h4 {
+  font-family: 'Montserrat', sans-serif; /* Consistent font family */
+  font-size: 70px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+h5 {
+  font-size: 25px;
+}
+
+p {
+  font-size: larger;
+  margin-left: 460px;
+  margin-right: 460px;
+  font-style: italic;
+}
+
+/* Seções */
+section {
+  padding: 4rem;
+  text-align: center;
+}
+
+/* Scroll */
+.scrollable-container {
+  height: 900px; /* Adjust the height to match your header's height */
+  overflow-y: auto;
+  background-image: url('ScrollBack.jpg');
+  background-size: cover;
+}
+
+section:not(.portfolio, header) {
+  padding: 4rem;
+  text-align: center;
+}
+
+/* Seção Hero */
+/* .hero {
+  background-image: linear-gradient(to bottom right, #ffffff, #091799);
+  color: #fff;
+} */
+
+/* Seção Portfólio */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.portfolio .project img {
+  max-width: 20%;
+  height: auto;
+
+/* .services {
+  background-image: linear-gradient(to bottom left, black, white);
+} */
+
+.project {
+  background-color: #222;
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  /* Ajustes para telas menores */
+  .project {
+    width: 100%;
+  }
+}
+
+footer {
+  text-align: center;
+}
+
+.layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  max-height: 300px;
+  margin: 0 auto;
+  background-color: #000;
+  color: #fff;
+}
+}
