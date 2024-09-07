@@ -16,9 +16,16 @@ function pesquisar() {
   // Resto do seu código, agora com scrollableContainer já definido e limpo
   let campoPesquisa = document.getElementById("campo-pesquisa").value;
 
+  // Verifica se o campo de pesquisa está vazio
+  if (campoPesquisa === "") {
+    scrollableContainer.innerHTML = "<p>Que pena... Parece que não estamos olhando para o mesmo quadro. Não se preocupe... Imagine quantas vezes quiser!</p>";
+    return; // Interrompe a função se o campo estiver vazio
+  }
+
   // ... resto do seu código de pesquisa ...
 
   // Itera sobre os dados da pesquisa e cria elementos HTML para cada resultado
+  let encontrouResultados = false;
   for (let dado of dados) {
     titulo = dado.titulo.toLowerCase();
     descricao = dado.descricao.toLowerCase();
@@ -33,11 +40,12 @@ function pesquisar() {
           <a href="${dado.link}" target="_blank" rel="noopener noreferrer">Saiba Mais</a>
         </section>
       `;
+      encontrouResultados = true;
     }
   }
 
-  // Verifica se o container scrollable tem algum conteúdo
-  if (scrollableContainer.innerHTML === "") {
+  // Verifica se encontrou resultados
+  if (!encontrouResultados) {
     scrollableContainer.innerHTML = "<p>Que pena... Parece que não estamos olhando para o mesmo quadro. Não se preocupe... Imagine quantas vezes quiser!</p>";
   }
 }
